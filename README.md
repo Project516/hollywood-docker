@@ -1,8 +1,22 @@
 # hollywood-docker
 
+![Build Status](https://github.com/project516/hollywood-docker/actions/workflows/docker-publish.yml/badge.svg)
+
 A Docker container that runs the [Hollywood](https://packages.debian.org/sid/hollywood) package - creates a "hacker" terminal view with split screen effects.
 
 ## Usage
+
+Pull the latest build:
+```bash
+docker pull ghcr.io/project516/hollywood-docker:master
+```
+
+Run the container:
+```bash
+docker run --rm -it ghcr.io/project516/hollywood-docker:master
+```
+
+## Build
 
 Build the image:
 ```bash
