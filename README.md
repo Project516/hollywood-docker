@@ -38,3 +38,11 @@ Hollywood is a Debian package that fills your console with Hollywood-style "hack
 
 - Docker
 - Terminal that supports TTY/PTY allocation
+
+The `docker run` commands above use `-it` so your terminal stays attached:
+- `-i` keeps STDIN open so Hollywood can read keyboard input
+- `-t` allocates a pseudo-TTY, which Hollywood needs to render its split-screen UI
+
+If you see `the input device is not a TTY`, you forgot `-t` or are piping into `docker run` (for example, in a script or CI). Use `--tty` or run from an interactive shell instead.
+
+To stop Hollywood, press `q` inside the terminal or quit the container with `Ctrl+C`.

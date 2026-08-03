@@ -1,0 +1,8 @@
+# Build context for this image only needs the Dockerfile.
+# Excluding these keeps context small and avoids leaking repo
+# metadata into the build.
+.git
+.github
+*.md
+LICENSE
+renovate.json
